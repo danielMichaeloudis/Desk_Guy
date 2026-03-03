@@ -1,0 +1,18 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "idf.openOcdConfigs": [
+    "interface/ftdi/esp32_devkitj_v1.cfg",
+    "target/esp32s3.cfg"
+  ],
+  "idf.port": "detect",
+  "idf.currentSetup": "/home/dan/esp/esp-idf",
+  "idf.customExtraVars": {
+    "IDF_TARGET": "esp32s3"
+  },
+  "clangd.path": "/home/dan/.espressif/tools/esp-clang/16.0.1-fe4f10a809/esp-clang/bin/clangd",
+  "clangd.arguments": [
+    "--background-index",
+    "--query-driver=**",
+    "--compile-commands-dir=/home/dan/Projects/desk_guy_read/desk_guy/build"
+  ]
+}
