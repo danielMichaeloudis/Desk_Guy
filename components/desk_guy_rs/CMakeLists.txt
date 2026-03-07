@@ -30,7 +30,7 @@ set(RUST_STATIC_LIBRARY "${CARGO_TARGET_DIR}/${RUST_TARGET}/${CARGO_BUILD_TYPE}/
 idf_build_get_property(sdkconfig SDKCONFIG) 
 idf_build_get_property(idf_path IDF_PATH) 
 ExternalProject_Add( 
-    project_rust_temp_mix 
+    project_desk_guy_rs 
     PREFIX "${CARGO_PROJECT_DIR}" 
     DOWNLOAD_COMMAND "" 
     CONFIGURE_COMMAND ${CMAKE_COMMAND} -E env cargo clean --target ${RUST_TARGET} --target-dir ${CARGO_TARGET_DIR} 
@@ -56,10 +56,10 @@ ExternalProject_Add(
         "${RUST_INCLUDE_HEADER}" 
         "${RUST_STATIC_LIBRARY}" ) 
         
-add_prebuilt_library(library_rust_temp_mix "${RUST_STATIC_LIBRARY}" PRIV_REQUIRES "${RUST_DEPS}") 
+add_prebuilt_library(library_desk_guy_rs "${RUST_STATIC_LIBRARY}" PRIV_REQUIRES "${RUST_DEPS}") 
 
-add_dependencies(library_rust_temp_mix project_rust_temp_mix) 
+add_dependencies(library_desk_guy_rs project_desk_guy_rs) 
 
 target_include_directories(${COMPONENT_LIB} PUBLIC "${RUST_INCLUDE_DIR}") 
 
-target_link_libraries(${COMPONENT_LIB} PRIVATE library_rust_temp_mix)
+target_link_libraries(${COMPONENT_LIB} PRIVATE library_desk_guy_rs)

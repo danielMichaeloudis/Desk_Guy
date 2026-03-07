@@ -4,7 +4,7 @@
     "interface/ftdi/esp32_devkitj_v1.cfg",
     "target/esp32s3.cfg"
   ],
-  "idf.port": "detect",
+  "idf.port": "/dev/ttyACM0",
   "idf.currentSetup": "/home/dan/esp/esp-idf",
   "idf.customExtraVars": {
     "IDF_TARGET": "esp32s3"
@@ -14,5 +14,6 @@
     "--background-index",
     "--query-driver=**",
     "--compile-commands-dir=/home/dan/Projects/desk_guy_read/desk_guy/build"
-  ]
+  ],
+  "idf.flashType": "UART"
 }

@@ -1,2 +1,14 @@
-idf_component_register(SRCS "desk_guy_clib.c"
-                    INCLUDE_DIRS "include")
+idf_component_register(
+    SRCS 
+        "lcd.c" 
+        "sd.c" 
+        "bmp.c" 
+        "desk_guy_clib.c"
+    INCLUDE_DIRS 
+        "include"
+    REQUIRES
+        "esp_lcd"
+        "log"
+        "driver"
+        "fatfs"
+)

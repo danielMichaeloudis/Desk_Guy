@@ -59,6 +59,6 @@ direct_dependencies:
 - espressif/esp_lcd_spd2010
 - espressif/esp_lcd_touch_spd2010
 - idf
-manifest_hash: 51c5dd8354f09c1398ea3ce4e65b4d0a85a1eda91ee9ece69e9ec1b1ea157d1b
+manifest_hash: c0e7856a58314f2ffe17c0bb91d75da7a72e46e58ab37570f4783236af098000
 target: esp32s3
 version: 2.0.0

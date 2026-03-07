@@ -5,4 +5,6 @@ idf_component_register(
         "."
     REQUIRES
         "desk_guy_rs"
+        "freertos"
+        "heap"
 )
